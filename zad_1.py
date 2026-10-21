@@ -1,6 +1,6 @@
 class Student:
-    name : str
-    marks : list
+    name: str
+    marks: list
 
     def __init__(self, name, marks):
         self.name = name

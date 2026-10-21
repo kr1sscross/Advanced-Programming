@@ -5,5 +5,6 @@ def zad2(numbers: list) -> list:
 
     return result
 
+
 numbers = [1, 2, 3, 4, 5]
 print(zad2(numbers))

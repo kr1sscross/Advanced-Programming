@@ -8,5 +8,6 @@ def zad6(list1: list, list2: list) -> list:
 
     return flist
 
+
 if __name__ == "__main__":
-    print(zad6([2,4,8],[2,6,8,10]))
+    print(zad6([2, 4, 8], [2, 6, 8, 10]))

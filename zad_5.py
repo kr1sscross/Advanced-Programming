@@ -4,5 +4,6 @@ def zad5(nums: list, num: int) -> bool:
     else:
         return False
 
+
 if __name__ == "__main__":
-    print(zad5([1, 2, 3, 4, 5],3))
+    print(zad5([1, 2, 3, 4, 5], 3))

@@ -3,6 +3,7 @@ def zad3(num: int) -> bool:
 
     return tf
 
+
 if __name__ == "__main__":
     if zad3(5):
         print("Even")

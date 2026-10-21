@@ -2,7 +2,9 @@ import requests
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--city", required=True, help="City to search for", type=str)
+parser.add_argument(
+    "--city", required=True, help="City to search for", type=str
+)
 args = parser.parse_args()
 city = args.city
 
@@ -12,24 +14,24 @@ response = requests.get(url)
 
 data = response.json()
 
-class Brewery:
-    id : str
-    name : str
-    brewery_type : str
-    address_1 : str | None
-    address_2 : str | None
-    address_3 : str | None
-    city : str
-    state_province : str
-    postal_code : str
-    country : str
-    longitude : float | None
-    latitude : float | None
-    phone : str | None
-    website_url : str | None
-    state : str
-    street : str | None
 
+class Brewery:
+    id: str
+    name: str
+    brewery_type: str
+    address_1: str | None
+    address_2: str | None
+    address_3: str | None
+    city: str
+    state_province: str
+    postal_code: str
+    country: str
+    longitude: float | None
+    latitude: float | None
+    phone: str | None
+    website_url: str | None
+    state: str
+    street: str | None
 
     def __init__(self, data: dict):
         self.id = data["id"]
@@ -52,11 +54,12 @@ class Brewery:
     def __str__(self):
         return f"{self.id} | {self.name} | {self.brewery_type} | {self.city}"
 
+
 breweries = []
 
 for item in data[:20]:
-        brewery = Brewery(item)
-        breweries.append(brewery)
+    brewery = Brewery(item)
+    breweries.append(brewery)
 
 
 for brewery in breweries:
